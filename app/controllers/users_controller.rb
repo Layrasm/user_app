@@ -8,11 +8,15 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    @user = User.new(user_params)
   end
 
   def edit
   end
+
+  private
+    def user_params
+      params.require(:user).permit()
 
   def delete
   end
