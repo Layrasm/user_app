@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
 
   def edit
-    @user #could delete
+    render :_form
   end
 
   def update

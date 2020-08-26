@@ -1,0 +1,33 @@
+<h1> "Edit User" </h1>
+</br>
+<%= form_with(model: @user, local:true) do |f| %> 
+  <div>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, required: true, placeholder: "First Name:" %>
+  </br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true, placeholder: "Last Name:" %>
+  </br>
+  <%= f.label :age %>
+  <%= f.text_field :age, required: true, placeholder: "Age:" %>
+  </br>
+  <%= f.label :hair_color %>
+  <%= f.text_field :hair_color, required: true, placeholder: "Hair Color:" %>
+  </br>
+  <%= f.label :eye_color %>
+  <%= f.text_field :eye_color, required: true, placeholder: "Eye Color:" %>
+  </br>
+  <%= f.label :gender %>
+  <%= f.text_field :gender, required: true, placeholder: "Gender:" %>
+  </br>
+  <%= f.label :alive %>
+  <%= f.text_field :alive, required: true, placeholder: "Alive (Y/N):" %>
+  </br>
+  </div>
+    <%= f.submit %>
+<%end%>
+
+
+
+
+#local:true means its a local database#
