@@ -12,6 +12,8 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+
+    render :_form
   end
 
   def create
@@ -31,7 +33,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to users_path
+      redirect_to @user
     else
       render :edit
     end
